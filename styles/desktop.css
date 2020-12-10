@@ -1,0 +1,78 @@
+.container {
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: auto;
+    width: 640px;
+    grid-gap: 0px;
+    grid-template-columns: 1fr, 6fr, 1fr;
+    grid-template-rows:min-content, min-content, min-content, auto, min-content, min-content, min-content;
+    grid-template-areas: 
+    "header header header header"
+    "hover hover hover hover"
+    "thumb-bar thumb-bar thumb-bar thumb-bar"
+    "bigimage bigimage bigimage bigimage"
+    "bigimage bigimage bigimage bigimage"
+    "userinput userinput inputarea effect"
+}
+.header{
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    text-align: center;
+}
+#thumb-bar{
+    grid-area: thumb-bar;
+    place-self: center;
+    align-self: flex-start;
+    height: 100%;
+    width: 100%;
+    margin-top: -1em;
+}
+.hover{    
+    grid-area: hover;
+    align-self: flex-start;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    margin-top: -1em;
+    margin-bottom: 1em ;
+}
+.bigimage{
+    grid-area: bigimage;
+}
+.bigimage > img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+  }
+#bottom{
+    grid-area: userinput;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    white-space: nowrap;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+#inputarea{
+    grid-area: inputarea;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+#last{
+    grid-area: effect;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;
+    padding-bottom: 2em;
+} 
+div img {
+    width: 20%;
+}
